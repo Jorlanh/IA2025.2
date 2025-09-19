@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: IA na Educação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-node {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .flowchart-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(88, 166, 255, 0.2), 0 4px 6px -4px rgba(88, 166, 255, 0.2);
+            border-color: #58a6ff;
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #58a6ff;
+            height: 4rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Palette: Brilliant Blues -->
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white">IA na Educação</h1>
+            <p class="mt-4 text-lg md:text-xl text-blue-300">Desvendando o Futuro da Aprendizagem e da Inclusão</p>
+            <div class="mt-8 text-center">
+                <h3 class="text-lg font-semibold text-white mb-3">Equipe do Projeto</h3>
+                <div class="text-sm text-gray-400 grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 max-w-2xl mx-auto">
+                    <p>Anna Luiza Moreira De Oliveira</p>
+                    <p>Cauã Maia De Brito</p>
+                    <p>Jorlan Heider Da Fé Santos</p>
+                    <p>Karen Da Silva Ferreira</p>
+                    <p>Sophia Nelly Lazo Baldeon</p>
+                    <p>Zaira Dutra</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="contexto" class="mb-16">
+                <div class="card rounded-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">1. Contextualização e Importância</h2>
+                    <p class="mb-8 text-lg">A Inteligência Artificial já está transformando as práticas pedagógicas. Utilizando conceitos como Aprendizado de Máquina, Processamento de Linguagem Natural e Sistemas Adaptativos, a IA personaliza o ensino e abre novas fronteiras para o aprendizado.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="card p-6 rounded-lg">
+                            <div class="text-5xl mb-2">🧠</div>
+                            <h3 class="text-xl font-semibold text-white">Machine Learning</h3>
+                            <p class="mt-2">Identifica padrões no desempenho dos alunos para personalizar conteúdo.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg">
+                            <div class="text-5xl mb-2">✍️</div>
+                            <h3 class="text-xl font-semibold text-white">PLN</h3>
+                            <p class="mt-2">Analisa textos para corrigir redações e criar chatbots de suporte.</p>
+                        </div>
+                        <div class="card p-6 rounded-lg">
+                            <div class="text-5xl mb-2">⚙️</div>
+                            <h3 class="text-xl font-semibold text-white">Sistemas Adaptativos</h3>
+                            <p class="mt-2">Ajusta o conteúdo dinamicamente ao ritmo de cada estudante.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="problemas" class="mb-16">
+                <div class="card rounded-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">2. Problemas no Contexto Escolar</h2>
+                    <p class="mb-8 text-lg">Apesar do potencial, a implementação da IA enfrenta obstáculos significativos, especialmente na rede pública. A desigualdade de acesso a recursos básicos é um dos maiores desafios.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Infraestrutura Tecnológica</h3>
+                            <p class="mb-4">Uma pesquisa com professores da rede pública revelou um dado alarmante: a grande maioria das escolas não possui a infraestrutura necessária para implementar soluções de IA de forma eficaz.</p>
+                            <ul class="space-y-3 list-disc list-inside">
+                                <li class="font-semibold">Perda de Pensamento Crítico</li>
+                                <li class="font-semibold">Uso Inadequado e Plágio</li>
+                                <li class="font-semibold">Redefinição do Papel do Professor</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-center text-white mb-4">Escolas Públicas com Infraestrutura Adequada para IA</h3>
+                             <div class="chart-container">
+                                <canvas id="infraestruturaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="solucao" class="mb-16">
+                 <div class="card rounded-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">3. Hipótese de Solução: Sistema de Apoio ao Diagnóstico</h2>
+                    <p class="mb-8 text-lg">Propomos um sistema inteligente que utiliza IA para o diagnóstico precoce de dificuldades de aprendizagem, atuando como uma ferramenta de apoio ao professor, sem substituir o diagnóstico clínico.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white">Leitura e Escrita</h3>
+                            <p class="mt-2 text-sm">Identifica indícios de dislexia e disortografia.</p>
+                        </div>
+                         <div class="card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white">Interpretação Textual</h3>
+                            <p class="mt-2 text-sm">Detecta dificuldade em extrair ideias centrais e fazer inferências.</p>
+                        </div>
+                        <div class="card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white">Raciocínio Lógico</h3>
+                            <p class="mt-2 text-sm">Aponta sinais de discalculia e falhas em sequências lógicas.</p>
+                        </div>
+                         <div class="card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white">Atenção e Organização</h3>
+                            <p class="mt-2 text-sm">Sugere padrões de TDAH ou desorganização cognitiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fluxo" class="mb-16">
+                 <div class="card rounded-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">4. Fluxo Operacional do Sistema</h2>
+                    <div class="flex flex-col items-center">
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>1. Entrada de Dados:</strong> Provas e atividades são digitalizadas.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>2. Processamento (PLN):</strong> Modelos de IA analisam o conteúdo.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>3. Análise de Padrões:</strong> IA aplica regras psicopedagógicas.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>4. Classificação Inicial:</strong> Gera hipótese com grau de confiança.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>5. Relatório Pedagógico:</strong> Cria relatório com evidências e recomendações.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-node w-full md:w-3/4 lg:w-1/2"><strong>6. Acompanhamento:</strong> Histórico é armazenado para análise longitudinal.</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="aplicacoes" class="mb-16">
+                <div class="card rounded-lg p-6 md:p-8">
+                     <h2 class="text-3xl font-bold text-white mb-4">5. Aplicações e Ferramentas Possíveis</h2>
+                     <p class="mb-8 text-lg">A IA pode ser aplicada em diversas frentes para apoiar alunos e professores, desde assistentes virtuais até ferramentas que promovem a inclusão de alunos com necessidades especiais.</p>
+                    <div class="chart-container max-w-3xl h-96">
+                        <canvas id="aplicacoesChart"></canvas>
+                    </div>
+                     <p class="text-center mt-4 text-sm text-gray-400">Gráfico ilustrativo do impacto potencial de cada aplicação.</p>
+                </div>
+            </section>
+
+            <section id="desafios" class="mb-16">
+                <div class="card rounded-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">6. Desafios e Perspectivas Futuras</h2>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                         <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Obstáculos Atuais</h3>
+                            <ul class="space-y-2 list-disc list-inside">
+                                <li>Exclusão digital em escolas públicas.</li>
+                                <li>Privacidade e segurança de dados (LGPD).</li>
+                                <li>Risco de vieses algorítmicos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Próximos Passos</h3>
+                            <ul class="space-y-2 list-disc list-inside">
+                                <li>Implementar testes-piloto em escolas.</li>
+                                <li>Desenvolver versões mobile acessíveis.</li>
+                                <li>Oferecer oficinas de formação para docentes.</li>
+                                <li>Criar um conselho ético-pedagógico.</li>
+                            </ul>
+                        </div>
+                        <div class="md:col-span-2 text-center card mt-6 p-6">
+                             <h3 class="text-2xl font-semibold text-blue-300">A Necessidade de Capacitação</h3>
+                             <p class="mt-2">É fundamental investir na formação de professores para que possam utilizar a IA de forma crítica, ética e eficaz, garantindo que a tecnologia sirva como uma ferramenta de empoderamento, e não de substituição.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center my-12 border-t border-gray-700 pt-8">
+            <h2 class="text-3xl font-bold text-white">Conclusão</h2>
+            <p class="mt-4 text-lg max-w-3xl mx-auto">A Inteligência Artificial, quando aplicada com visão crítica e responsabilidade, tem o potencial de ser uma poderosa aliada para promover a <span class="text-blue-300 font-semibold">inclusão</span>, a <span class="text-blue-300 font-semibold">personalização do ensino</span> e a <span class="text-blue-300 font-semibold">redução das desigualdades educacionais</span>.</p>
+        </footer>
+    </div>
+
+<script>
+    const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+            return label.join(' ');
+        }
+        return label;
+    };
+
+    const processLabels = (labels) => {
+        return labels.map(label => {
+            if (label.length > 16) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > 16) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            return label;
+        });
+    };
+
+    const infraestruturaCtx = document.getElementById('infraestruturaChart').getContext('2d');
+    new Chart(infraestruturaCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Possuem Infraestrutura', 'Não Possuem Infraestrutura'],
+            datasets: [{
+                label: '% de Escolas',
+                data: [26.3, 73.7],
+                backgroundColor: ['#58a6ff', '#30363d'],
+                borderColor: '#161b22',
+                borderWidth: 4,
+                hoverOffset: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { color: '#c9d1d9', font: { size: 14 } }
+                },
+                tooltip: { callbacks: { title: tooltipTitleCallback } }
+            },
+            cutout: '70%'
+        }
+    });
+
+    const aplicacoesCtx = document.getElementById('aplicacoesChart').getContext('2d');
+    new Chart(aplicacoesCtx, {
+        type: 'bar',
+        data: {
+            labels: processLabels(['Chatbots Educacionais', 'Plataformas Adaptativas', 'Relatórios Automatizados', 'Ferramentas de Inclusão']),
+            datasets: [{
+                label: 'Impacto Potencial',
+                data: [85, 95, 80, 90],
+                backgroundColor: ['#58a6ff', '#3182ce', '#2b6cb0', '#2c5282'],
+                borderColor: '#58a6ff',
+                borderWidth: 1,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    grid: { color: '#30363d' },
+                    ticks: { color: '#c9d1d9', font: { size: 12 } }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: { color: '#c9d1d9', font: { size: 12 } }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { title: tooltipTitleCallback } }
+            }
+        }
+    });
+</script>
+</body>
+</html>
+
